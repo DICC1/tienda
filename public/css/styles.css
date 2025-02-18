@@ -1,0 +1,85 @@
+/* Cambiar color del enlace de menú cuando se pasa el mouse por encima */
+.nav-pills .nav-link:hover {
+    background-color: rgb(66, 165, 245); /* Cambia el fondo a azul */
+    color: white; /* Cambia el texto a blanco para mayor visibilidad */
+}
+
+/* Cambiar color del menú desplegable */
+.dropdown-menu .dropdown-item:hover {
+    background-color: rgb(66, 165, 245); /* Cambia a azul cuando se pasa el mouse */
+    color: white; /* Cambia el texto a blanco */
+}
+
+.btn-primary{
+    background-color: transparent; /* Fondo transparente por defecto */
+    color: #008cff; /* Color del texto (puedes cambiarlo si lo deseas) */
+    border: 2px solid #44abff; /* Borde azul */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de fuente */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el fondo y el color del texto */
+
+}
+.btn-primary:hover{
+    background-color: rgb(66, 165, 245); /* Cambia el fondo a azul */
+    color: white; /* Cambia el texto a blanco */
+}
+
+.btn-success{
+    background-color: transparent; /* Fondo transparente por defecto */
+    color: #42a5f5; /* Color del texto (puedes cambiarlo si lo deseas) */
+    border: 2px solid #42a5f5; /* Borde azul */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el fondo y el color del texto */
+}
+.btn-success:hover{
+    background-color: rgb(66, 165, 245); /* Cambia el fondo a azul */
+    color: white; /* Cambia el texto a blanco */
+}
+
+.btn-custom {
+    background-color: transparent; /* Fondo transparente por defecto */
+    color: #42a5f5; /* Color del texto (puedes cambiarlo si lo deseas) */
+    border: 2px solid #42a5f5; /* Borde azul */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el fondo y el color del texto */
+}
+
+.btn-custom:hover {
+    background-color: #42a5f5; /* Color azul al pasar el mouse */
+    color: white; /* Cambia el color del texto al blanco al pasar el mouse */
+}
+
+.navbar-brand img {
+    height: 40px; /* Ajusta la altura del logo */
+}
+
+.form-control{
+    height: 40px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+    padding-right: 30px; /* Espacio para el ícono */
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;  /* Ajusta el tamaño de la imagen */
+    height: 20px;
+}
+#codigo-qr {
+    margin-top: 20px;
+}
+#resumen-compra {
+    margin-bottom: 20px;
+}

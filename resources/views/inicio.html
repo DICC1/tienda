@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Pagina Principal</title>
+</head>
+<body>
+    <header>
+    </header>
+    <!-- 
+    <!-- Menú de navegación --
+    <div class="container">
+        <ul class="nav nav-pills">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Logo" style="max-height: 50px;">
+            </a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Menú</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Alimentos Y Despensa</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Harina Y Reposteria</a></li>
+                            <li><a class="dropdown-item" href="#">Cereales, Granolas Y Avena</a></li>
+                            <li><a class="dropdown-item" href="#">Sopas Y Pastas</a></li>
+                            <li><a class="dropdown-item" href="#">Aceites De Cocina</a></li>
+                            <li><a class="dropdown-item" href="#">Pan Y Tostadas</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Bebidas</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Jugos Y Nectares</a></li>
+                            <li><a class="dropdown-item" href="#">Energéticos Y Hidratantes</a></li>
+                            <li><a class="dropdown-item" href="#">Chocolate Instantáneo</a></li>
+                            <li><a class="dropdown-item" href="#">Agua</a></li>
+                            <li><a class="dropdown-item" href="#">Refresco</a></li>
+                        </ul>
+                    </li>        
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Bienvenido</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
+                    <li><a class="dropdown-item" href="registro.html">Registrarse</a></li>
+                </ul>
+            </li>
+            <a class="navbar-brand" href="carritocompras.html">
+                <img src="img/carrito.png" alt="Carrito De Compras" style="max-height: 50px;">
+            </a>
+        </ul>
+    </div>
+                -->
+    <!-- Sección de productos -->
+    <div class="container my-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="productos-container">
+            <!-- Los productos se generarán aquí -->
+        </div>
+    </div>
+    
+    <!-- Pie de página
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Contáctanos</h5>
+                    <p><strong>Teléfono:</strong> +52 (738) 735-8090</p>
+                    <p><strong>Domicilio:</strong> Avenida Rio Colorado, Hidalgo, México</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Redes Sociales</h5>
+                    <ul class="list-unstyled d-flex">
+                        <li class="me-3"><a href="https://www.facebook.com" class="text-white" target="_blank">Facebook</a></li>
+                        <li class="me-3"><a href="https://www.twitter.com" class="text-white" target="_blank">Twitter</a></li>
+                        <li class="me-3"><a href="https://www.instagram.com" class="text-white" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com" class="text-white" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Información Adicional</h5>
+                    <p>&copy; 2024 La Subidita. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script>
+    // Array de productos
+    const productos = [
+        { nombre: 'Coca Cola 600ml', precio: 19.99, imagen: 'img/1.png' },
+        { nombre: 'Maizena Vainilla 49g', precio: 15.99, imagen: 'img/2.jpg' },
+        { nombre: 'Leche Santa Clara 1L', precio: 29.99, imagen: 'img/3.jpg' },
+        {nombre: 'Jabon Zote 400g', precio: 18.99, imagen: 'img/7.jpg'},
+        {nombre: 'Galletas Flor De Naranjo 75g', precio: 15.99, imagen: 'img/8.jpg'},
+        {nombre: 'Sopa Pluma La Moderna 250g', precio: 9.99, imagen: 'img/9.jpg'}
+    ];
+    
+    // Función para generar productos en el HTML
+    function generarProductos() {
+        const contenedor = document.getElementById('productos-container');
+        productos.forEach(producto => {
+            const col = document.createElement('div');
+            col.className = 'col';
+            col.innerHTML = `
+                <div class="card h-100">
+                    <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">${producto.nombre}</h5>
+                        <p class="card-text">$${producto.precio.toFixed(2)}</p>
+                        <button class="btn btn-success" onclick="agregarAlCarrito({ nombre: '${producto.nombre}', precio: ${producto.precio} })">Agregar al carrito</button>
+                    </div>
+                </div>
+            `;
+            contenedor.appendChild(col);
+        });
+    }
+    
+    // Función para agregar productos al carrito
+    function agregarAlCarrito(producto) {
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        const productoExistenteIndex = carrito.findIndex(item => item.nombre === producto.nombre);
+    
+        if (productoExistenteIndex > -1) {
+            carrito[productoExistenteIndex].cantidad += 1; // Incrementar cantidad
+        } else {
+            producto.cantidad = 1; // Añadir nuevo producto con cantidad 1
+            carrito.push(producto);
+        }
+        
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        alert('Producto agregado al carrito');
+    }
+    
+    // Generar productos al cargar la página
+    document.addEventListener('DOMContentLoaded', generarProductos);
+    </script>
+    <script>
+        // Manejo de submenús en Bootstrap 5
+        document.addEventListener('DOMContentLoaded', function () {
+            // Selecciona todos los submenús
+            var dropdownSubmenus = document.querySelectorAll('.dropdown-submenu .dropdown-toggle');
+            
+            dropdownSubmenus.forEach(function (submenu) {
+                submenu.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Cierra cualquier otro submenú abierto
+                    var allSubmenus = document.querySelectorAll('.dropdown-submenu .dropdown-menu');
+                    allSubmenus.forEach(function (otherSubmenu) {
+                        if (otherSubmenu !== submenu.nextElementSibling) {
+                            otherSubmenu.classList.remove('show');
+                        }
+                    });
+                    
+                    // Alterna el submenú seleccionado
+                    var nextEl = submenu.nextElementSibling;
+                    if (nextEl && nextEl.classList.contains('dropdown-menu')) {
+                        nextEl.classList.toggle('show');
+                    }
+                });
+            });
+            
+            // Cierra los submenús cuando se cierra el dropdown principal
+            document.querySelectorAll('.nav-item.dropdown').forEach(function (dropdown) {
+                dropdown.addEventListener('hide.bs.dropdown', function () {
+                    var allSubmenus = dropdown.querySelectorAll('.dropdown-menu');
+                    allSubmenus.forEach(function (submenu) {
+                        submenu.classList.remove('show');
+                    });
+                });
+            });
+        });
+      </script>
+</body>
+</html>
