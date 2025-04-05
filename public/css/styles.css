@@ -10,20 +10,6 @@
     color: white; /* Cambia el texto a blanco */
 }
 
-.btn-primary{
-    background-color: transparent; /* Fondo transparente por defecto */
-    color: #008cff; /* Color del texto (puedes cambiarlo si lo deseas) */
-    border: 2px solid #44abff; /* Borde azul */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 18px; /* Tamaño de fuente */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave para el fondo y el color del texto */
-
-}
-.btn-primary:hover{
-    background-color: rgb(66, 165, 245); /* Cambia el fondo a azul */
-    color: white; /* Cambia el texto a blanco */
-}
-
 .btn-success{
     background-color: transparent; /* Fondo transparente por defecto */
     color: #42a5f5; /* Color del texto (puedes cambiarlo si lo deseas) */
@@ -55,10 +41,6 @@
     height: 40px; /* Ajusta la altura del logo */
 }
 
-.form-control{
-    height: 40px;
-}
-
 .password-container {
     position: relative;
 }
@@ -83,3 +65,79 @@
 #resumen-compra {
     margin-bottom: 20px;
 }
+
+#resumen-texto {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.custombg {
+    background-color: #42a5f5;
+
+}
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
+  }
+  
+  .content {
+    flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+  }
+  
+  .footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  .btn{
+    background-color: transparent; /* Fondo transparente por defecto */
+    color: #42a5f5; /* Color del texto (puedes cambiarlo si lo deseas) */
+    border: 2px solid #008cff;
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el fondo y el color del texto */
+  }
+  .btn:hover{
+    background-color: #42a5f5; /* Color azul al pasar el mouse */
+    color: white; /* Cambia el color del texto al blanco al pasar el mouse */
+    border: 2px solid #00437a;
+  }
+  .btn-delete{
+    background-color: transparent; /* Fondo transparente por defecto */
+    color: #42a5f5; /* Color del texto (puedes cambiarlo si lo deseas) */
+    border: 2px solid #006fca;
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el fondo y el color del texto */
+
+  }
+  .btn-delete:hover{
+    background-color: #ff0000;
+    color: white;
+    border-color: #000000;
+  }
+  .form{
+    width: 250px;
+    height: 40px;
+  }
+  .nav{
+    display: flex;
+    justify-content: right; /* Centra los elementos de forma horizontal */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+  }
+  .alert{
+    position: fixed;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1000;
+  }
